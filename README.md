@@ -16,4 +16,8 @@ First, you must have a standard administrator account or list of standard admini
 1. **Extension Attribute:** Add "find_admins" as an extension attribute in the JSS
 2. **Smart Group:** Create a smart group with criteria of **_find_admins_** is **_not_** *your-intended-admin-username(s)*
 3. **Customize rm_admins script:** Edit the "rm_admins" script to include *your-intended-admin-username(s)*
-4. **Remove Admins Policy:** Create a policy set to **_ongoing_** triggered by **_recurring check-in_** scoped to the *smart group from step 2* that runs the **_"rm_admins"_** script
+4. **Remove Admins Policy:** Create a policy set to **_ongoing_** triggered by **_recurring check-in_** scoped to the *smart group from step 2* that runs the "rm_admins" script and reports inventory.
+5. **Power Up Self Service Policy**: Create a Self Service policy that runs the the "ss_powerup" script and reports inventory.
+
+#END RESULT#
+End users will "Power Up" via self service policy at which point the results of the extension attribute from step 1 will place them in the smart group from step 2 which will cause the policy in step 3 which removes unintended admins to run on the device at next check-in. The length of time the end user has admin privelages will be determined by the check-in schedule of our JSS.

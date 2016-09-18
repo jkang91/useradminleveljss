@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Info
+#Info#
 #This script will remove local admin accounts not specified in sect.1#
 
 #sect.1#

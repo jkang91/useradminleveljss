@@ -13,7 +13,7 @@ JAMF Nation user Sean Holden responded to a JAMF Nation thread about a way to re
 First, you must have a standard administrator account or list of standard administrator accounts for this logic to work properly. The main idea here is that we specify our intended local admin account(s) in the "rm_admins" script and then by using the extension attribute "find_admins", smart group logic, and creating a Self Service Policy that runs the "ss_powerup" script; we can achieve our goal while preventing potential end user abuse of the functionality.
 
 #JSS SETUP#
-1. **Extension Attribute:** Add "find_admins" as an extension attribute in the JSS.
+1. **Extension Attribute:** Add "find_admins" as an extension attribute in the JSS
 2. **Smart Group:** Create a smart group with criteria of **_find_admins_** is **_not_** *your-intended-admin-username(s)*
-3. **Customize rm_admins:** Edit the "rm_admins" file to include your-intended-admin-username(2).
-4. **Remove Admins Policy:** Create a policy set to **_ongoing_** triggered by **_recurring check-in_** scoped to the smart group from step 2 that runs the "rm_admins" script.
+3. **Customize rm_admins:** Edit the "rm_admins" file to include *your-intended-admin-username(s)*
+4. **Remove Admins Policy:** Create a policy set to **_ongoing_** triggered by **_recurring check-in_** scoped to the smart group from step 2 that runs the "rm_admins" script

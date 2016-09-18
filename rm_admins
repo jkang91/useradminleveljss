@@ -5,7 +5,7 @@
 
 #SECT.1#
 #Exclude your intended admin account#
-excluded_user1="administrator"
+excluded_user1="username"
 
 #SECT.2#
 #Get the admin list#

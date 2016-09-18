@@ -14,5 +14,5 @@ First, you must have a standard administrator account or list of standard admini
 
 #JSS SETUP#
 1. Extension Attribute: Add "find_admins" as an extension attribute in the JSS.
-2. Smart Group: Create a smart group with criteria of ###find_admins### is ###not### *your-intended-admin-username(s)*
+2. Smart Group: Create a smart group with criteria of **find_admins** is **not** *your-intended-admin-username(s)*
 rm_admins.sh: Create an ongoing policy triggerd by check-in to run this script. Scope it to the cm

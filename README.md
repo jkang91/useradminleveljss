@@ -20,4 +20,4 @@ First, you must have a standard administrator account or list of standard admini
 5. **Power Up Self Service Policy**: Create a Self Service policy that runs the the "ss_powerup" script and reports inventory.
 
 #END RESULT#
-End users will "Power Up" via self service policy at which point the results of the extension attribute from step 1 will place them in the smart group from step 2 which will trigger the policy in step 3 (which removes unintended admins) to run on the device at next check-in. The length of time the end user has admin privelages will be determined by the check-in schedule of our JSS.
+End users will "Power Up" via self service policy at which point the results of the extension attribute from step 1 will place them in the smart group from step 2 which will trigger the policy in step 3 (which removes unintended admins) to run on the device at next check-in. The length of time the end user has admin privelages will be determined by the check-in schedule of your JSS.

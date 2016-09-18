@@ -1,5 +1,5 @@
 #OBJECTIVE#
-The objective of this workflow is the give end users a secure way to gain temporary local administrator access to their workstation and log use of this function. The secondary benefit of this workflow is that it also revokes administrator rights of all unintended local admin accounts, improving device security.
+The objective of this workflow is the give end users a secure way to gain temporary local administrator access to their workstation and log use of this function. The secondary benefit of this workflow is that it also revokes administrator rights of all unintended local admin accounts, imrpoving or maintaining device security.
 
 #CREDITS#
 The original concept of this workflow within the JSS was presented by Andrina Kelly in a presentation called "Getting Users to Do Your Job (Without Them Knowing It)" (video here: https://www.youtube.com/watch?v=AzlWdrRc1rY github here: https://github.com/andrina/JNUC2013/tree/master/Users%20Do%20Your%20Job/MakeMeAdmin).

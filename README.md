@@ -15,5 +15,5 @@ First, you must have a standard administrator account or list of standard admini
 #JSS SETUP#
 1. **Extension Attribute:** Add "find_admins" as an extension attribute in the JSS.
 2. **Smart Group:** Create a smart group with criteria of **_find_admins_** is **_not_** *your-intended-admin-username(s)*
-3. **Customize rm_admins:** Edit the "rm_admins" file to include your intended local admins.
+3. **Customize rm_admins:** Edit the "rm_admins" file to include your-intended-admin-username(2).
 4. **Remove Admins Policy:** Create a policy set to **_ongoing_** triggered by **_recurring check-in_** scoped to the smart group from step 2 that runs the "rm_admins" script.

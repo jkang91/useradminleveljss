@@ -10,7 +10,7 @@ JAMF Nation user Sean Holden responded to a JAMF Nation thread about a way to re
 
 
 #LOGIC OVERVIEW#
-First, you must have a standardized administrator account name or list of all intended administrator account names for this logic to work properly. The main idea here is that we specify our intended local admin account(s) in the "rm_admins" script and then by using the extension attribute "find_admins", smart group logic, and a Self Service Policy that runs the "ss_powerup" script; we can complete our objective.
+First, you must have a standardized administrator account name or list of all intended administrator account names for this logic to work properly. The main idea here is that we specify our intended local admin account(s) in the "rm_admins" script and then by using the extension attribute "find_admins", smart group logic, and a Self Service Policy that runs the "ss_powerup" script; we can complete our objective while also improving or maintaining security
 
 #JSS SETUP#
 1. **Extension Attribute:** Add "find_admins" as an extension attribute in the JSS

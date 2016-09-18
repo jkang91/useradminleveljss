@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#INFO#
+#Detect local admin accounts#
+
+#SECT.1#
+#Generate list of local admin accounts#
+list=()
+for username in $(dscl . list /Users UniqueID | awk '$2 > 500 { print $1 }'); do
+
+#SECT.2#
+#Check which accounts are reported as admins and list them#
+    if [[ $(dsmemberutil checkmembership -U "${username}" -G admin) != *not* ]]; then
+        list+=("${username}")
+    fi
+done
+
+#SECT.3#
+#Print results#
+echo "<result>${list[@]}</result>"

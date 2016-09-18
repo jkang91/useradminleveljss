@@ -1,0 +1,48 @@
+#!/bin/bash
+
+#Info
+#This script will remove local admin accounts not specified in sect.1#
+
+#sect.1#
+#Exclude your intended admin account#
+
+excluded_user1="administrator"
+
+#sect.2#
+#Get the admin list#
+
+local_admins=`dscl . read /Groups/admin GroupMembership | cut -d " " -f 2-`
+
+#sect.3#
+#Build the removal function#
+
+function delete_admin_user
+{
+        while [ $# -gt 0 ]
+        do
+                case $1 in
+
+                        root)
+                                echo "$1 user"
+                                ;;
+                        $excluded_user1)
+                                echo "$1 intended admin"
+                                ;;
+                        *)
+                                dseditgroup -o edit -d $1 admin
+                                echo "$1 removed from admin group: "$?
+                                ;;
+                esac
+                shift
+        done
+}
+
+#sect.4#
+#Put it all together#
+
+delete_admin_user $local_admins
+
+#sect.5#
+#Exit#
+
+exit 0

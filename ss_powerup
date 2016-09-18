@@ -15,7 +15,6 @@ mkdir /var/uits
 TIME=`date "+Date:%m-%d-%Y TIME:%H:%M:%S"`
 echo $TIME " by " $USERNAME >> /var/uits/AdminHistory.txt
 
-
 #SECT.3#
 #Power Up current user#
 /usr/sbin/dseditgroup -o edit -a $USERNAME -t user admin

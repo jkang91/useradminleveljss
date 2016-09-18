@@ -1,5 +1,5 @@
-#PURPOSE#
-The purpose of this workflow is the give end users a secure way to gain temporary admin access to their workstation and log use of this function. The secondary benefit of this workflow is that it also revokes administrator rights of all unintended local admin accounts, improving device security.
+#OBJECTIVE#
+The objective of this workflow is the give end users a secure way to gain temporary local administrator access to their workstation and log use of this function. The secondary benefit of this workflow is that it also revokes administrator rights of all unintended local admin accounts, improving device security.
 
 #CREDITS#
 The original concept of this workflow within the JSS was presented by Andrina Kelly in a presentation called "Getting Users to Do Your Job (Without Them Knowing It)" (video here: https://www.youtube.com/watch?v=AzlWdrRc1rY github here: https://github.com/andrina/JNUC2013/tree/master/Users%20Do%20Your%20Job/MakeMeAdmin).
@@ -10,7 +10,7 @@ JAMF Nation user Sean Holden responded to a JAMF Nation thread about a way to re
 
 
 #LOGIC OVERVIEW#
-First, you must have a standardized administrator account name or list of all intended administrator account names for this logic to work properly. The main idea here is that we specify our intended local admin account(s) in the "rm_admins" script and then by using the extension attribute "find_admins", smart group logic, and a Self Service Policy that runs the "ss_powerup" script; we can achieve our goal while preventing potential end user abuse of the functionality.
+First, you must have a standardized administrator account name or list of all intended administrator account names for this logic to work properly. The main idea here is that we specify our intended local admin account(s) in the "rm_admins" script and then by using the extension attribute "find_admins", smart group logic, and a Self Service Policy that runs the "ss_powerup" script; we can complete our objective.
 
 #JSS SETUP#
 1. **Extension Attribute:** Add "find_admins" as an extension attribute in the JSS

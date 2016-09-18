@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#INFO#
+#Gives local administrator privelages to the active user#
+#Creates a log (/var/uits/AdminHistory.txt) of use#
+#Only works if there is only one user logged in#
+
+#SECT.1#
+#Get active username#
+USERNAME=`who |grep console| awk '{print $1}'`
+
+#SECT.2#
+#Create/Append log#
+mkdir /var/uits
+TIME=`date "+Date:%m-%d-%Y TIME:%H:%M:%S"`
+echo $TIME " by " $USERNAME >> /var/uits/AdminHistory.txt
+
+
+#SECT.3#
+#Power Up current user#
+/usr/sbin/dseditgroup -o edit -a $USERNAME -t user admin
+
+#EXIT#
+exit 0
